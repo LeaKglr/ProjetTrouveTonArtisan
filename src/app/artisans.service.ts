@@ -30,4 +30,8 @@ export class ArtisansService {
       })
     )
   }
+
+  getAllArtisans(): Observable<Artisans[]> {
+    return this.http.get<Artisans[]>(this.dataUrl);
+  }
 }
