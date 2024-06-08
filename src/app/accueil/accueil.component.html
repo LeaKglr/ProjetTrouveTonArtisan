@@ -10,8 +10,58 @@
     <app-header></app-header>
 </header>
 <main class="main">
-    <div class="content">
-        <h1>{{title}}</h1>
+    <div id="utilisationsite">
+        <div id="titleline">
+            <h2>{{title}}</h2>
+        </div>
+        <div  id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner"> 
+                <div *ngFor="let etape of etapes; let i = index"  [ngClass]="{'carousel-item': true, 'active': i === 0}" data-bs-interval="10000">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p id="number">{{etape.nombre}}</p>
+                        <h3>{{etape.title}}</h3>
+                        <p>{{etape.description}}</p>
+                    </div>    
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <div id="artisansdumois" >
+        <h2>{{artisansdumois}}</h2>
+        <div id="card" class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" *ngFor="let artisan of topArtisans" >
+                <a [routerLink]="['/artisan', artisan.name]">
+                    <div class="card border-success mb-3"  style="max-width: 23rem;">
+                        <div class="card-header" >
+                            <h4>{{ artisan.name }}</h4>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Sa spécialité : </strong>{{artisan.specialty}}</p>
+                            <p><strong>Sa localisation : </strong>{{artisan.location}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <ng-container *ngFor="let filled of getStars(artisan.note)">
+                                <span [class.filled]="filled" class="star">&#9733;</span>
+                            </ng-container>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </main>
 <footer>
