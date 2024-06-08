@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: "accessibilite", component: PagesLegalesComponent},
   {path: "donneespersonnelles", component: PagesLegalesComponent},
   {path: "cookies", component: PagesLegalesComponent},
+  {path: 'category/:category', component: ListeArtisansComponent},
   {path: "**", component: PageErreurComponent}
 ];
 
