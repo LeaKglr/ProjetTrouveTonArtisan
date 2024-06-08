@@ -4,6 +4,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { PageErreurComponent } from './page-erreur/page-erreur.component';
 import { ListeArtisansComponent } from './liste-artisans/liste-artisans.component';
 import { PagesLegalesComponent } from './pages-legales/pages-legales.component';
+import { FicheArtisanComponent } from './fiche-artisan/fiche-artisan.component';
 
 const routes: Routes = [
   {path: "", component: AccueilComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: "donneespersonnelles", component: PagesLegalesComponent},
   {path: "cookies", component: PagesLegalesComponent},
   {path: 'category/:category', component: ListeArtisansComponent},
+  {path: 'artisan/:name', component: FicheArtisanComponent},
   {path: "**", component: PageErreurComponent}
 ];
 
