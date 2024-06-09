@@ -2,12 +2,12 @@
     <app-header></app-header>
 </header>
 <main>
-    <div *ngIf="filteredArtisans && filteredArtisans.length">
+    <section *ngIf="filteredArtisans && filteredArtisans.length">
         <h2>Artisans dans la catégorie "{{ category }}"</h2>
         <div id="card" class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col" *ngFor="let artisan of filteredArtisans">
                 <a [routerLink]="['/artisan', artisan.name]">
-                    <div class="card border-success mb-3"  style="max-width: 23rem;">
+                    <article class="card border-success mb-3"  style="max-width: 23rem;">
                         <div class="card-header" >
                         <h4>{{ artisan.name }}</h4>
                         </div>
@@ -20,11 +20,11 @@
                                 <span [class.filled]="filled" class="star">&#9733;</span>
                             </ng-container>
                         </div>
-                    </div>
+                    </article>
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 </main>
 
 <footer>

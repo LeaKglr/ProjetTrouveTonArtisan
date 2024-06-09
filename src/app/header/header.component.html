@@ -2,10 +2,10 @@
     <div class="container-fluid">
         <div class="container-fluid" id="logo">
             <a href="" class="navbar-brand">
-                <img src="assets/Images/Logo.png" alt="">
+                <img src="assets/Images/Logo.png" alt="Logo de la région avec le texte : Trouve ton artisan! Avec la région Auvergne-Rhône-Alpes">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#searchForm" aria-controls="searchForm" aria-expanded="false" aria-label="Toggle search">
-                <img src="assets/Images/search-blue.svg" alt="" id="searchicon">
+                <img src="assets/Images/search-blue.svg" alt="Icones de recherche bleu" id="searchicon">
             </button>
             <button id="btn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" style="border-color: #0074c7;"></span>
@@ -14,28 +14,28 @@
 
         <div id="searchetliens">
             <div class="collapse navbar-collapse" id="searchForm">
-                <form class="navbar-search m-auto mb-2 mb-lg-0">
+                <form class="navbar-search m-auto mb-2 mb-lg-0" aria-label="Formulaire de recherche">
                     <div class="input-group">
-                        <input #searchInput name="search" type="text" class="form-control me-2" placeholder="Rechercher" aria-label="Search">
-                        <button class="btn input-group-text" type="submit">
-                            <img id="logosearch" src="assets/Images/search-blue.svg" alt="">
+                        <input #searchInput name="search" type="text" class="form-control me-2" placeholder="Rechercher" aria-label="Search input">
+                        <button class="btn input-group-text" type="submit" aria-label="Bouton de recherche">
+                            <img id="logosearch" src="assets/Images/search-blue.svg" alt="Icône de recherche">
                         </button>
                     </div>
                 </form>
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/category/bâtiment">Bâtiment</a>
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" routerLink="/category/bâtiment" role="menuitem">Bâtiment</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/category/services">Services</a>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" routerLink="/category/services" role="menuitem">Services</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/category/fabrication">Fabrication</a>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" routerLink="/category/fabrication" role="menuitem">Fabrication</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/category/alimentation">Alimentation</a>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" routerLink="/category/alimentation" role="menuitem">Alimentation</a>
                     </li>
                 </ul>
             </div>
