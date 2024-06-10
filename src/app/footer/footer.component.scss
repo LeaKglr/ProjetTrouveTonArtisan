@@ -4,7 +4,6 @@
     background-color: #0074c7;
     color: #f1f8fc;
     padding: 20px 0;
-    font-size: 1.6rem;
     
     h2 {
         margin-left: 30px;
@@ -17,6 +16,7 @@
         }
     
     @media (min-width: 768px) {
+        font-size: 1.6rem;
         #contactetadresse {
             display: flex;
             flex-direction: row;
@@ -50,6 +50,7 @@
     }
 
     @media (max-width: 768px) {
+        
         #contactetadresse,  #teletmentionslegales {
             display: flex;
             flex-direction: column;
